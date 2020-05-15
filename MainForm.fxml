@@ -10,30 +10,30 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StereoControl.Controller">
    <children>
-      <Slider fx:id="z1vol" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="83.0" majorTickUnit="1.0" max="38.0" minorTickCount="0" snapToTicks="true" />
-      <Slider fx:id="z4vol" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="249.0" majorTickUnit="1.0" max="38.0" minorTickCount="0" snapToTicks="true" />
-      <Slider fx:id="z3vol" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="83.0" majorTickUnit="1.0" max="38.0" minorTickCount="0" snapToTicks="true" />
-      <Slider fx:id="z6vol" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="249.0" majorTickUnit="1.0" max="38.0" minorTickCount="0" snapToTicks="true" />
-      <Slider fx:id="z4bass" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="269.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
-      <Slider fx:id="z5vol" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="249.0" majorTickUnit="1.0" max="38.0" minorTickCount="0" snapToTicks="true" />
-      <Slider fx:id="z5bass" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="269.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
-      <Slider fx:id="z6bass" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="269.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
-      <Slider fx:id="z6treb" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="289.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
-      <Slider fx:id="z4treb" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="289.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
-      <Slider fx:id="z5treb" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="289.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
-      <Slider fx:id="z2vol" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="83.0" majorTickUnit="1.0" max="38.0" minorTickCount="0" snapToTicks="true" />
-      <Slider fx:id="z1bass" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="103.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
-      <Slider fx:id="z2bass" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="103.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
-      <Slider fx:id="z3bass" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="103.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
-      <Slider fx:id="z1treb" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="123.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
-      <Slider fx:id="z2treb" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="123.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
-      <Slider fx:id="z3treb" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="123.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
-      <Slider fx:id="z4bal" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="310.0" majorTickUnit="1.0" max="20.0" minorTickCount="0" snapToTicks="true" value="10.0" />
-      <Slider fx:id="z5bal" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="310.0" majorTickUnit="1.0" max="20.0" minorTickCount="0" snapToTicks="true" value="10.0" />
-      <Slider fx:id="z6bal" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="310.0" majorTickUnit="1.0" max="20.0" minorTickCount="0" snapToTicks="true" value="10.0" />
-      <Slider fx:id="z1bal" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="144.0" majorTickUnit="1.0" max="20.0" minorTickCount="0" snapToTicks="true" value="10.0" />
-      <Slider fx:id="z2bal" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="144.0" majorTickUnit="1.0" max="20.0" minorTickCount="0" snapToTicks="true" value="10.0" />
-      <Slider fx:id="z3bal" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="144.0" majorTickUnit="1.0" max="20.0" minorTickCount="0" snapToTicks="true" value="10.0" />
+      <Slider fx:id="z1vol" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="83.0" majorTickUnit="1.0" max="38.0" minorTickCount="0" />
+      <Slider fx:id="z4vol" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="249.0" majorTickUnit="1.0" max="38.0" minorTickCount="0" />
+      <Slider fx:id="z3vol" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="83.0" majorTickUnit="1.0" max="38.0" minorTickCount="0" />
+      <Slider fx:id="z6vol" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="249.0" majorTickUnit="1.0" max="38.0" minorTickCount="0" />
+      <Slider fx:id="z4bass" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="269.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" />
+      <Slider fx:id="z5vol" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="249.0" majorTickUnit="1.0" max="38.0" minorTickCount="0" />
+      <Slider fx:id="z5bass" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="269.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" />
+      <Slider fx:id="z6bass" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="269.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" />
+      <Slider fx:id="z6treb" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="289.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" />
+      <Slider fx:id="z4treb" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="289.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" />
+      <Slider fx:id="z5treb" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="289.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" />
+      <Slider fx:id="z2vol" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="83.0" majorTickUnit="1.0" max="38.0" minorTickCount="0" />
+      <Slider fx:id="z1bass" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="103.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" />
+      <Slider fx:id="z2bass" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="103.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" />
+      <Slider fx:id="z3bass" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="103.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" />
+      <Slider fx:id="z1treb" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="123.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" />
+      <Slider fx:id="z2treb" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="123.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" />
+      <Slider fx:id="z3treb" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="123.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" />
+      <Slider fx:id="z4bal" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="310.0" majorTickUnit="1.0" max="20.0" minorTickCount="0" value="10.0" />
+      <Slider fx:id="z5bal" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="310.0" majorTickUnit="1.0" max="20.0" minorTickCount="0" value="10.0" />
+      <Slider fx:id="z6bal" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="310.0" majorTickUnit="1.0" max="20.0" minorTickCount="0" value="10.0" />
+      <Slider fx:id="z1bal" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="144.0" majorTickUnit="1.0" max="20.0" minorTickCount="0" value="10.0" />
+      <Slider fx:id="z2bal" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="144.0" majorTickUnit="1.0" max="20.0" minorTickCount="0" value="10.0" />
+      <Slider fx:id="z3bal" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="144.0" majorTickUnit="1.0" max="20.0" minorTickCount="0" value="10.0" />
       <Separator layoutX="71.0" layoutY="43.0" orientation="VERTICAL" prefHeight="314.0" prefWidth="5.0" />
       <Label layoutX="24.0" layoutY="82.0" text="VOL" />
       <Label layoutX="21.0" layoutY="102.0" text="BASS" />

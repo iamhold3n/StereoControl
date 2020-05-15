@@ -23,7 +23,7 @@ public class Controller implements Initializable{
     @FXML private ToggleButton z4power;
     @FXML private ToggleButton z5power;
     @FXML private ToggleButton z6power;
-    @FXML private ToggleButton[] zonePower;
+    private ToggleButton[] zonePower = new ToggleButton[6];
 
     @FXML private Slider z1vol;
     @FXML private Slider z2vol;
@@ -31,7 +31,7 @@ public class Controller implements Initializable{
     @FXML private Slider z4vol;
     @FXML private Slider z5vol;
     @FXML private Slider z6vol;
-    @FXML private Slider[] zoneVolume;
+    private Slider[] zoneVolume = new Slider[6];
 
     @FXML private Slider z1bass;
     @FXML private Slider z2bass;
@@ -39,7 +39,7 @@ public class Controller implements Initializable{
     @FXML private Slider z4bass;
     @FXML private Slider z5bass;
     @FXML private Slider z6bass;
-    @FXML private Slider[] zoneBass;
+    private Slider[] zoneBass = new Slider[6];
 
     @FXML private Slider z1treb;
     @FXML private Slider z2treb;
@@ -47,7 +47,7 @@ public class Controller implements Initializable{
     @FXML private Slider z4treb;
     @FXML private Slider z5treb;
     @FXML private Slider z6treb;
-    @FXML private Slider[] zoneTreb;
+    private Slider[] zoneTreb = new Slider[6];
 
     @FXML private Slider z1bal;
     @FXML private Slider z2bal;
@@ -55,7 +55,7 @@ public class Controller implements Initializable{
     @FXML private Slider z4bal;
     @FXML private Slider z5bal;
     @FXML private Slider z6bal;
-    @FXML private Slider[] zoneBalance;
+    private Slider[] zoneBalance = new Slider[6];
 
     @FXML private CheckBox z1mute;
     @FXML private CheckBox z2mute;
@@ -63,7 +63,7 @@ public class Controller implements Initializable{
     @FXML private CheckBox z4mute;
     @FXML private CheckBox z5mute;
     @FXML private CheckBox z6mute;
-    @FXML private CheckBox[] zoneMute;
+    private CheckBox[] zoneMute = new CheckBox[6];
 
     @FXML private Label z1vollbl;
     @FXML private Label z2vollbl;
@@ -71,7 +71,7 @@ public class Controller implements Initializable{
     @FXML private Label z4vollbl;
     @FXML private Label z5vollbl;
     @FXML private Label z6vollbl;
-    @FXML private Label[] zoneVolumeLabel;
+    private Label[] zoneVolumeLabel = new Label[6];
 
     @FXML private Label z1basslbl;
     @FXML private Label z2basslbl;
@@ -79,7 +79,7 @@ public class Controller implements Initializable{
     @FXML private Label z4basslbl;
     @FXML private Label z5basslbl;
     @FXML private Label z6basslbl;
-    @FXML private Label[] zoneBassLabel;
+    private Label[] zoneBassLabel = new Label[6];
 
     @FXML private Label z1treblbl;
     @FXML private Label z2treblbl;
@@ -87,7 +87,7 @@ public class Controller implements Initializable{
     @FXML private Label z4treblbl;
     @FXML private Label z5treblbl;
     @FXML private Label z6treblbl;
-    @FXML private Label[] zoneTrebLabel;
+    private Label[] zoneTrebLabel = new Label[6];
 
     @FXML private Label z1ballbl;
     @FXML private Label z2ballbl;
@@ -95,43 +95,43 @@ public class Controller implements Initializable{
     @FXML private Label z4ballbl;
     @FXML private Label z5ballbl;
     @FXML private Label z6ballbl;
-    @FXML private Label[] zoneBalanceLabel;
+    private Label[] zoneBalanceLabel = new Label[6];
 
-    @FXML private IntegerProperty z1volint;
-    @FXML private IntegerProperty z2volint;
-    @FXML private IntegerProperty z3volint;
-    @FXML private IntegerProperty z4volint;
-    @FXML private IntegerProperty z5volint;
-    @FXML private IntegerProperty z6volint;
-    @FXML private IntegerProperty[] zoneVolumeInt;
+    private IntegerProperty z1volint = new SimpleIntegerProperty();
+    private IntegerProperty z2volint = new SimpleIntegerProperty();;
+    private IntegerProperty z3volint = new SimpleIntegerProperty();;
+    private IntegerProperty z4volint = new SimpleIntegerProperty();;
+    private IntegerProperty z5volint = new SimpleIntegerProperty();;
+    private IntegerProperty z6volint = new SimpleIntegerProperty();;
+    private IntegerProperty[] zoneVolumeInt = {z1volint, z2volint, z3volint, z4volint, z5volint, z6volint};
 
-    @FXML private IntegerProperty z1bassint;
-    @FXML private IntegerProperty z2bassint;
-    @FXML private IntegerProperty z3bassint;
-    @FXML private IntegerProperty z4bassint;
-    @FXML private IntegerProperty z5bassint;
-    @FXML private IntegerProperty z6bassint;
-    @FXML private IntegerProperty[] zoneBassInt;
+    private IntegerProperty z1bassint = new SimpleIntegerProperty();;
+    private IntegerProperty z2bassint = new SimpleIntegerProperty();;
+    private IntegerProperty z3bassint = new SimpleIntegerProperty();;
+    private IntegerProperty z4bassint = new SimpleIntegerProperty();;
+    private IntegerProperty z5bassint = new SimpleIntegerProperty();;
+    private IntegerProperty z6bassint = new SimpleIntegerProperty();;
+    private IntegerProperty[] zoneBassInt = {z1bassint, z2bassint, z3bassint, z4bassint, z5bassint, z6bassint};
 
-    @FXML private IntegerProperty z1trebint;
-    @FXML private IntegerProperty z2trebint;
-    @FXML private IntegerProperty z3trebint;
-    @FXML private IntegerProperty z4trebint;
-    @FXML private IntegerProperty z5trebint;
-    @FXML private IntegerProperty z6trebint;
-    @FXML private IntegerProperty[] zoneTrebInt;
+    private IntegerProperty z1trebint = new SimpleIntegerProperty();;
+    private IntegerProperty z2trebint = new SimpleIntegerProperty();;
+    private IntegerProperty z3trebint = new SimpleIntegerProperty();;
+    private IntegerProperty z4trebint = new SimpleIntegerProperty();;
+    private IntegerProperty z5trebint = new SimpleIntegerProperty();;
+    private IntegerProperty z6trebint = new SimpleIntegerProperty();;
+    private IntegerProperty[] zoneTrebInt = {z1trebint, z2trebint, z3trebint, z4trebint, z5trebint, z6trebint};
 
-    @FXML private IntegerProperty z1balint;
-    @FXML private IntegerProperty z2balint;
-    @FXML private IntegerProperty z3balint;
-    @FXML private IntegerProperty z4balint;
-    @FXML private IntegerProperty z5balint;
-    @FXML private IntegerProperty z6balint;
-    @FXML private IntegerProperty[] zoneBalanceInt;
+    private IntegerProperty z1balint = new SimpleIntegerProperty();;
+    private IntegerProperty z2balint = new SimpleIntegerProperty();;
+    private IntegerProperty z3balint = new SimpleIntegerProperty();;
+    private IntegerProperty z4balint = new SimpleIntegerProperty();;
+    private IntegerProperty z5balint = new SimpleIntegerProperty();;
+    private IntegerProperty z6balint = new SimpleIntegerProperty();;
+    private IntegerProperty[] zoneBalanceInt = {z1balint, z2balint, z3balint, z4balint, z5balint, z6balint};
 
     // END FXML VARIABLES
 
-    @FXML public void initZones() {
+    public void initZones() {
         for (int z = 0; z < 6; z++) {
             // send command ("?1" + (z+1) + "\r");
             // >xxaabbccddeeffgghhiijj'CR'
@@ -163,14 +163,14 @@ public class Controller implements Initializable{
         }
     }
 
-    @FXML void powerToggle(int z) {
+    public void powerToggle(int z) {
         zones[z].setPower(!zones[z].getPower());
 
         checkPowerState(z);
         System.out.println("Zone " + (z+1) + " power toggled.");
     }
 
-    @FXML void checkPowerState(int z) {
+    public void checkPowerState(int z) {
         // enable sliders/checkbox
         if (zones[z].getPower()) {
             zonePower[z].setSelected(true);
@@ -199,7 +199,7 @@ public class Controller implements Initializable{
         }
     }
 
-    @FXML public void setVolume(int z) {
+    public void setVolume(int z) {
         zones[z].setVol(zoneVolumeInt[z].get());
         if (zoneVolumeInt[z].get() < 10) {
             // send command ("<1" + (z+1) + "VO0" + vol + "\r")
@@ -210,7 +210,7 @@ public class Controller implements Initializable{
         System.out.println("Zone " + (z+1) + " volume set to " + zoneVolumeInt[z].get());
     }
 
-    @FXML public void setBass(int z) {
+    public void setBass(int z) {
         zones[z].setBass(zoneBassInt[z].get());
         if (zoneBassInt[z].get() < 10) {
             // send command ("<1" + (z+1) + "BS0" + vol + "\r")
@@ -221,7 +221,7 @@ public class Controller implements Initializable{
         System.out.println("Zone " + (z+1) + " bass set to " + zoneBassInt[z].get());
     }
 
-    @FXML public void setTreble(int z) {
+     public void setTreble(int z) {
         zones[z].setTreb(zoneTrebInt[z].get());
         if (zoneTrebInt[z].get() < 10) {
             // send command ("<1" + (z+1) + "TR0" + vol + "\r")
@@ -232,7 +232,7 @@ public class Controller implements Initializable{
         System.out.println("Zone " + (z+1) + " treble set to " + zoneTrebInt[z].get());
     }
 
-    @FXML public void setBalance(int z) {
+    public void setBalance(int z) {
         zones[z].setBal(zoneBalanceInt[z].get());
         if (zoneBalanceInt[z].get() < 10) {
             // send command ("<1" + (z+1) + "BL0" + vol + "\r")
@@ -243,7 +243,7 @@ public class Controller implements Initializable{
         System.out.println("Zone " + (z+1) + " balance set to " + zoneBalanceInt[z].get());
     }
 
-    @FXML public void setMute(int z) {
+    public void setMute(int z) {
         zones[z].setMute(!zones[z].getMute());
         if (zones[z].getMute()) {
             // send command ("<1" + (z+1) + "MU01\r")
@@ -256,7 +256,6 @@ public class Controller implements Initializable{
 
     @Override public void initialize(URL url, ResourceBundle resourceBundle) {
         // initialize arrays of buttons/sliders/checkboxes/labels
-        zonePower = new ToggleButton[6];
         zonePower[0] = z1power;
         zonePower[1] = z2power;
         zonePower[2] = z3power;
@@ -264,7 +263,6 @@ public class Controller implements Initializable{
         zonePower[4] = z5power;
         zonePower[5] = z6power;
 
-        zoneVolume = new Slider[6];
         zoneVolume[0] = z1vol;
         zoneVolume[1] = z2vol;
         zoneVolume[2] = z3vol;
@@ -272,7 +270,6 @@ public class Controller implements Initializable{
         zoneVolume[4] = z5vol;
         zoneVolume[5] = z6vol;
 
-        zoneBass = new Slider[6];
         zoneBass[0] = z1bass;
         zoneBass[1] = z2bass;
         zoneBass[2] = z3bass;
@@ -280,7 +277,6 @@ public class Controller implements Initializable{
         zoneBass[4] = z5bass;
         zoneBass[5] = z6bass;
 
-        zoneTreb = new Slider[6];
         zoneTreb[0] = z1treb;
         zoneTreb[1] = z2treb;
         zoneTreb[2] = z3treb;
@@ -288,7 +284,6 @@ public class Controller implements Initializable{
         zoneTreb[4] = z5treb;
         zoneTreb[5] = z6treb;
 
-        zoneBalance = new Slider[6];
         zoneBalance[0] = z1bal;
         zoneBalance[1] = z2bal;
         zoneBalance[2] = z3bal;
@@ -296,7 +291,6 @@ public class Controller implements Initializable{
         zoneBalance[4] = z5bal;
         zoneBalance[5] = z6bal;
 
-        zoneMute = new CheckBox[6];
         zoneMute[0] = z1mute;
         zoneMute[1] = z2mute;
         zoneMute[2] = z3mute;
@@ -304,7 +298,6 @@ public class Controller implements Initializable{
         zoneMute[4] = z5mute;
         zoneMute[5] = z6mute;
 
-        zoneVolumeLabel = new Label[6];
         zoneVolumeLabel[0] = z1vollbl;
         zoneVolumeLabel[1] = z2vollbl;
         zoneVolumeLabel[2] = z3vollbl;
@@ -312,7 +305,6 @@ public class Controller implements Initializable{
         zoneVolumeLabel[4] = z5vollbl;
         zoneVolumeLabel[5] = z6vollbl;
 
-        zoneBassLabel = new Label[6];
         zoneBassLabel[0] = z1basslbl;
         zoneBassLabel[1] = z2basslbl;
         zoneBassLabel[2] = z3basslbl;
@@ -320,7 +312,6 @@ public class Controller implements Initializable{
         zoneBassLabel[4] = z5basslbl;
         zoneBassLabel[5] = z6basslbl;
 
-        zoneTrebLabel = new Label[6];
         zoneTrebLabel[0] = z1treblbl;
         zoneTrebLabel[1] = z2treblbl;
         zoneTrebLabel[2] = z3treblbl;
@@ -328,7 +319,6 @@ public class Controller implements Initializable{
         zoneTrebLabel[4] = z5treblbl;
         zoneTrebLabel[5] = z6treblbl;
 
-        zoneBalanceLabel = new Label[6];
         zoneBalanceLabel[0] = z1ballbl;
         zoneBalanceLabel[1] = z2ballbl;
         zoneBalanceLabel[2] = z3ballbl;
@@ -336,86 +326,34 @@ public class Controller implements Initializable{
         zoneBalanceLabel[4] = z5ballbl;
         zoneBalanceLabel[5] = z6ballbl;
 
-        // display live slider values as integers in labels beside
-        zoneVolumeInt = new IntegerProperty[6];
-        z1volint = new SimpleIntegerProperty();
-        z2volint = new SimpleIntegerProperty();
-        z3volint = new SimpleIntegerProperty();
-        z4volint = new SimpleIntegerProperty();
-        z5volint = new SimpleIntegerProperty();
-        z6volint = new SimpleIntegerProperty();
+        // bind slider doubles to integers for display in labels
         z1volint.bindBidirectional(z1vol.valueProperty());
         z2volint.bindBidirectional(z2vol.valueProperty());
         z3volint.bindBidirectional(z3vol.valueProperty());
         z4volint.bindBidirectional(z4vol.valueProperty());
         z5volint.bindBidirectional(z5vol.valueProperty());
         z6volint.bindBidirectional(z6vol.valueProperty());
-        zoneVolumeInt[0] = z1volint;
-        zoneVolumeInt[1] = z2volint;
-        zoneVolumeInt[2] = z3volint;
-        zoneVolumeInt[3] = z4volint;
-        zoneVolumeInt[4] = z5volint;
-        zoneVolumeInt[5] = z6volint;
 
-        zoneBassInt = new IntegerProperty[6];
-        z1bassint = new SimpleIntegerProperty();
-        z2bassint = new SimpleIntegerProperty();
-        z3bassint = new SimpleIntegerProperty();
-        z4bassint = new SimpleIntegerProperty();
-        z5bassint = new SimpleIntegerProperty();
-        z6bassint = new SimpleIntegerProperty();
         z1bassint.bindBidirectional(z1bass.valueProperty());
         z2bassint.bindBidirectional(z2bass.valueProperty());
         z3bassint.bindBidirectional(z3bass.valueProperty());
         z4bassint.bindBidirectional(z4bass.valueProperty());
         z5bassint.bindBidirectional(z5bass.valueProperty());
         z6bassint.bindBidirectional(z6bass.valueProperty());
-        zoneBassInt[0] = z1bassint;
-        zoneBassInt[1] = z2bassint;
-        zoneBassInt[2] = z3bassint;
-        zoneBassInt[3] = z4bassint;
-        zoneBassInt[4] = z5bassint;
-        zoneBassInt[5] = z6bassint;
 
-        zoneTrebInt = new IntegerProperty[6];
-        z1trebint = new SimpleIntegerProperty();
-        z2trebint = new SimpleIntegerProperty();
-        z3trebint = new SimpleIntegerProperty();
-        z4trebint = new SimpleIntegerProperty();
-        z5trebint = new SimpleIntegerProperty();
-        z6trebint = new SimpleIntegerProperty();
         z1trebint.bindBidirectional(z1treb.valueProperty());
         z2trebint.bindBidirectional(z2treb.valueProperty());
         z3trebint.bindBidirectional(z3treb.valueProperty());
         z4trebint.bindBidirectional(z4treb.valueProperty());
         z5trebint.bindBidirectional(z5treb.valueProperty());
         z6trebint.bindBidirectional(z6treb.valueProperty());
-        zoneTrebInt[0] = z1trebint;
-        zoneTrebInt[1] = z2trebint;
-        zoneTrebInt[2] = z3trebint;
-        zoneTrebInt[3] = z4trebint;
-        zoneTrebInt[4] = z5trebint;
-        zoneTrebInt[5] = z6trebint;
 
-        zoneBalanceInt = new IntegerProperty[6];
-        z1balint = new SimpleIntegerProperty();
-        z2balint = new SimpleIntegerProperty();
-        z3balint = new SimpleIntegerProperty();
-        z4balint = new SimpleIntegerProperty();
-        z5balint = new SimpleIntegerProperty();
-        z6balint = new SimpleIntegerProperty();
         z1balint.bindBidirectional(z1bal.valueProperty());
         z2balint.bindBidirectional(z2bal.valueProperty());
         z3balint.bindBidirectional(z3bal.valueProperty());
         z4balint.bindBidirectional(z4bal.valueProperty());
         z5balint.bindBidirectional(z5bal.valueProperty());
         z6balint.bindBidirectional(z6bal.valueProperty());
-        zoneBalanceInt[0] = z1balint;
-        zoneBalanceInt[1] = z2balint;
-        zoneBalanceInt[2] = z3balint;
-        zoneBalanceInt[3] = z4balint;
-        zoneBalanceInt[4] = z5balint;
-        zoneBalanceInt[5] = z6balint;
 
         // initialize zone info
         initZones();
