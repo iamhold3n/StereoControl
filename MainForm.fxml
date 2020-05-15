@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StereoControl.Controller">
+   <children>
+      <Slider fx:id="z1vol" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="83.0" majorTickUnit="1.0" max="38.0" minorTickCount="0" snapToTicks="true" />
+      <Slider fx:id="z4vol" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="249.0" majorTickUnit="1.0" max="38.0" minorTickCount="0" snapToTicks="true" />
+      <Slider fx:id="z3vol" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="83.0" majorTickUnit="1.0" max="38.0" minorTickCount="0" snapToTicks="true" />
+      <Slider fx:id="z6vol" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="249.0" majorTickUnit="1.0" max="38.0" minorTickCount="0" snapToTicks="true" />
+      <Slider fx:id="z4bass" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="269.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
+      <Slider fx:id="z5vol" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="249.0" majorTickUnit="1.0" max="38.0" minorTickCount="0" snapToTicks="true" />
+      <Slider fx:id="z5bass" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="269.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
+      <Slider fx:id="z6bass" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="269.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
+      <Slider fx:id="z6treb" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="289.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
+      <Slider fx:id="z4treb" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="289.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
+      <Slider fx:id="z5treb" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="289.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
+      <Slider fx:id="z2vol" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="83.0" majorTickUnit="1.0" max="38.0" minorTickCount="0" snapToTicks="true" />
+      <Slider fx:id="z1bass" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="103.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
+      <Slider fx:id="z2bass" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="103.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
+      <Slider fx:id="z3bass" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="103.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
+      <Slider fx:id="z1treb" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="123.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
+      <Slider fx:id="z2treb" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="123.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
+      <Slider fx:id="z3treb" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="123.0" majorTickUnit="1.0" max="14.0" minorTickCount="0" snapToTicks="true" />
+      <Slider fx:id="z4bal" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="310.0" majorTickUnit="1.0" max="20.0" minorTickCount="0" snapToTicks="true" value="10.0" />
+      <Slider fx:id="z5bal" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="310.0" majorTickUnit="1.0" max="20.0" minorTickCount="0" snapToTicks="true" value="10.0" />
+      <Slider fx:id="z6bal" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="310.0" majorTickUnit="1.0" max="20.0" minorTickCount="0" snapToTicks="true" value="10.0" />
+      <Slider fx:id="z1bal" blockIncrement="1.0" disable="true" layoutX="88.0" layoutY="144.0" majorTickUnit="1.0" max="20.0" minorTickCount="0" snapToTicks="true" value="10.0" />
+      <Slider fx:id="z2bal" blockIncrement="1.0" disable="true" layoutX="278.0" layoutY="144.0" majorTickUnit="1.0" max="20.0" minorTickCount="0" snapToTicks="true" value="10.0" />
+      <Slider fx:id="z3bal" blockIncrement="1.0" disable="true" layoutX="471.0" layoutY="144.0" majorTickUnit="1.0" max="20.0" minorTickCount="0" snapToTicks="true" value="10.0" />
+      <Separator layoutX="71.0" layoutY="43.0" orientation="VERTICAL" prefHeight="314.0" prefWidth="5.0" />
+      <Label layoutX="24.0" layoutY="82.0" text="VOL" />
+      <Label layoutX="21.0" layoutY="102.0" text="BASS" />
+      <Label layoutX="22.0" layoutY="122.0" text="TREB" />
+      <Label layoutX="25.0" layoutY="143.0" text="BAL" />
+      <Label layoutX="24.0" layoutY="248.0" text="VOL" />
+      <CheckBox fx:id="z1mute" disable="true" layoutX="150.0" layoutY="166.0" mnemonicParsing="false" />
+      <CheckBox fx:id="z2mute" disable="true" layoutX="340.0" layoutY="166.0" mnemonicParsing="false" />
+      <CheckBox fx:id="z3mute" disable="true" layoutX="533.0" layoutY="166.0" mnemonicParsing="false" />
+      <CheckBox fx:id="z4mute" disable="true" layoutX="150.0" layoutY="332.0" mnemonicParsing="false" />
+      <CheckBox fx:id="z5mute" disable="true" layoutX="340.0" layoutY="332.0" mnemonicParsing="false" />
+      <CheckBox fx:id="z6mute" disable="true" layoutX="533.0" layoutY="332.0" mnemonicParsing="false" />
+      <Label layoutX="19.0" layoutY="166.0" text="MUTE" />
+      <Label layoutX="21.0" layoutY="268.0" text="BASS" />
+      <Label layoutX="22.0" layoutY="288.0" text="TREB" />
+      <Label layoutX="25.0" layoutY="309.0" text="BAL" />
+      <Label layoutX="19.0" layoutY="332.0" text="MUTE" />
+      <ToggleButton fx:id="z1power" layoutX="132.0" layoutY="46.0" mnemonicParsing="false" text="Zone 1" />
+      <ToggleButton fx:id="z2power" layoutX="322.0" layoutY="46.0" mnemonicParsing="false" text="Zone 2" />
+      <ToggleButton fx:id="z3power" layoutX="515.0" layoutY="46.0" mnemonicParsing="false" text="Zone 3" />
+      <ToggleButton fx:id="z4power" layoutX="132.0" layoutY="209.0" mnemonicParsing="false" text="Zone 4" />
+      <ToggleButton fx:id="z5power" layoutX="322.0" layoutY="209.0" mnemonicParsing="false" text="Zone 5" />
+      <ToggleButton fx:id="z6power" layoutX="515.0" layoutY="209.0" mnemonicParsing="false" text="Zone 6" />
+      <Label layoutX="15.0" layoutY="50.0" text="POWER" />
+      <Label layoutX="14.0" layoutY="213.0" text="POWER" />
+      <Group layoutX="158.0" layoutY="71.0" />
+      <Label fx:id="z1vollbl" layoutX="228.0" layoutY="82.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z1basslbl" layoutX="228.0" layoutY="102.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z1treblbl" layoutX="228.0" layoutY="122.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z1ballbl" layoutX="228.0" layoutY="143.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z2vollbl" layoutX="418.0" layoutY="82.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z2basslbl" layoutX="418.0" layoutY="102.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z2treblbl" layoutX="418.0" layoutY="122.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z2ballbl" layoutX="418.0" layoutY="143.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z3vollbl" layoutX="611.0" layoutY="82.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z3basslbl" layoutX="611.0" layoutY="102.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z3treblbl" layoutX="611.0" layoutY="122.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z3ballbl" layoutX="611.0" layoutY="143.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z4vollbl" layoutX="228.0" layoutY="248.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z4basslbl" layoutX="228.0" layoutY="268.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z4treblbl" layoutX="228.0" layoutY="288.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z4ballbl" layoutX="228.0" layoutY="309.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z5vollbl" layoutX="418.0" layoutY="248.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z5basslbl" layoutX="418.0" layoutY="268.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z5treblbl" layoutX="418.0" layoutY="288.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z5ballbl" layoutX="418.0" layoutY="309.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z6vollbl" layoutX="611.0" layoutY="248.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z6basslbl" layoutX="611.0" layoutY="268.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z6treblbl" layoutX="611.0" layoutY="288.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+      <Label fx:id="z6ballbl" layoutX="611.0" layoutY="309.0" maxWidth="25" text="Label" textAlignment="CENTER" />
+   </children>
+</Pane>
