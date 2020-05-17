@@ -21,15 +21,6 @@ public class Zone {
         else { this.mute = false; }
     }
 
-    public Zone() {
-        this.power = true;
-        this.vol = 30;
-        this.bass = 5;
-        this.treb = 5;
-        this.bal = 10;
-        this.mute = false;
-    }
-
     public void setPower(boolean pwr) { this.power = pwr; }
     public boolean getPower() { return this.power; }
 

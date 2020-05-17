@@ -10,10 +10,11 @@ import javafx.scene.control.Slider;
 import javafx.scene.control.CheckBox;
 
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable{
-    private SerialPort comm;
+    private SerialPort comm = SerialPort.getCommPorts()[0];
     private Zone[] zones = new Zone[6];
 
     // BEGIN FXML VARIABLES
@@ -146,7 +147,21 @@ public class Controller implements Initializable{
             // hh - balance control status
             // ii - source control status
             // jj - keypad connecting status
-            zones[z] = new Zone(">1" + (z+1) + "aa0100dd10050510iijj\r"); // temp example string of zone info
+
+            try {
+                // send inquiry for zone z
+                String cmd = "?1" + (z+1) + "\r";
+                comm.writeBytes(cmd.getBytes(StandardCharsets.UTF_8), 4);
+
+                // read inquiry for zone z and create zone object
+                byte[] inq = new byte[24];
+                comm.readBytes(inq, 24);
+                String parsed = new String(inq, StandardCharsets.UTF_8);
+                zones[z] = new Zone(parsed);
+
+            } catch(Exception e) {
+                zones[z] = new Zone(">1" + (z+1) + "aa0100dd10050510iijj\r"); // temp example string of zone info
+            }
 
             // initialize sliders/checkbox and set values
             checkPowerState(z);
@@ -173,6 +188,9 @@ public class Controller implements Initializable{
     public void checkPowerState(int z) {
         // enable sliders/checkbox
         if (zones[z].getPower()) {
+            String cmd = "<PR" + (z+1) + "00";
+            comm.writeBytes(cmd.getBytes(StandardCharsets.UTF_8), 8);
+
             zonePower[z].setSelected(true);
             zoneVolume[z].setDisable(false);
             zoneBass[z].setDisable(false);
@@ -186,6 +204,9 @@ public class Controller implements Initializable{
         }
         // disable sliders/checkbox
         else {
+            String cmd = "<PR" + (z+1) + "01";
+            comm.writeBytes(cmd.getBytes(StandardCharsets.UTF_8), 8);
+
             zonePower[z].setSelected(false);
             zoneVolume[z].setDisable(true);
             zoneBass[z].setDisable(true);
@@ -203,9 +224,13 @@ public class Controller implements Initializable{
         zones[z].setVol(zoneVolumeInt[z].get());
         if (zoneVolumeInt[z].get() < 10) {
             // send command ("<1" + (z+1) + "VO0" + vol + "\r")
+            String cmd = "<1" + (z+1) + "VO0" + zoneVolumeInt[z].get() + "\r";
+            comm.writeBytes(cmd.getBytes(StandardCharsets.UTF_8), 8);
         }
         else {
             // send command ("<1" + (z+1) + "VO" + vol + "\r")
+            String cmd = "<1" + (z+1) + "VO" + zoneVolumeInt[z].get() + "\r";
+            comm.writeBytes(cmd.getBytes(StandardCharsets.UTF_8), 8);
         }
         System.out.println("Zone " + (z+1) + " volume set to " + zoneVolumeInt[z].get());
     }
@@ -213,10 +238,14 @@ public class Controller implements Initializable{
     public void setBass(int z) {
         zones[z].setBass(zoneBassInt[z].get());
         if (zoneBassInt[z].get() < 10) {
-            // send command ("<1" + (z+1) + "BS0" + vol + "\r")
+            // send command ("<1" + (z+1) + "BS0" + bass + "\r")
+            String cmd = "<1" + (z+1) + "BS0" + zoneBassInt[z].get() + "\r";
+            comm.writeBytes(cmd.getBytes(StandardCharsets.UTF_8), 8);
         }
         else {
-            // send command ("<1" + (z+1) + "BS" + vol + "\r")
+            // send command ("<1" + (z+1) + "BS" + bass + "\r")
+            String cmd = "<1" + (z+1) + "BS" + zoneBassInt[z].get() + "\r";
+            comm.writeBytes(cmd.getBytes(StandardCharsets.UTF_8), 8);
         }
         System.out.println("Zone " + (z+1) + " bass set to " + zoneBassInt[z].get());
     }
@@ -224,10 +253,14 @@ public class Controller implements Initializable{
      public void setTreble(int z) {
         zones[z].setTreb(zoneTrebInt[z].get());
         if (zoneTrebInt[z].get() < 10) {
-            // send command ("<1" + (z+1) + "TR0" + vol + "\r")
+            // send command ("<1" + (z+1) + "TR0" + treb + "\r")
+            String cmd = "<1" + (z+1) + "TR0" + zoneTrebInt[z].get() + "\r";
+            comm.writeBytes(cmd.getBytes(StandardCharsets.UTF_8), 8);
         }
         else {
-            // send command ("<1" + (z+1) + "TR" + vol + "\r")
+            // send command ("<1" + (z+1) + "TR" + treb + "\r")
+            String cmd = "<1" + (z+1) + "TR" + zoneTrebInt[z].get() + "\r";
+            comm.writeBytes(cmd.getBytes(StandardCharsets.UTF_8), 8);
         }
         System.out.println("Zone " + (z+1) + " treble set to " + zoneTrebInt[z].get());
     }
@@ -235,10 +268,14 @@ public class Controller implements Initializable{
     public void setBalance(int z) {
         zones[z].setBal(zoneBalanceInt[z].get());
         if (zoneBalanceInt[z].get() < 10) {
-            // send command ("<1" + (z+1) + "BL0" + vol + "\r")
+            // send command ("<1" + (z+1) + "BL0" + bal + "\r")
+            String cmd = "<1" + (z+1) + "BL0" + zoneBalanceInt[z].get() + "\r";
+            comm.writeBytes(cmd.getBytes(StandardCharsets.UTF_8), 8);
         }
         else {
-            // send command ("<1" + (z+1) + "BL" + vol + "\r")
+            // send command ("<1" + (z+1) + "BL" + bal + "\r")
+            String cmd = "<1" + (z+1) + "BL" + zoneBalanceInt[z].get() + "\r";
+            comm.writeBytes(cmd.getBytes(StandardCharsets.UTF_8), 8);
         }
         System.out.println("Zone " + (z+1) + " balance set to " + zoneBalanceInt[z].get());
     }
@@ -247,14 +284,22 @@ public class Controller implements Initializable{
         zones[z].setMute(!zones[z].getMute());
         if (zones[z].getMute()) {
             // send command ("<1" + (z+1) + "MU01\r")
+            String cmd = "<1" + (z+1) + "MU01\r";
+            comm.writeBytes(cmd.getBytes(StandardCharsets.UTF_8), 8);
         }
         else {
             // send command ("<1" + (z+1) + "MU00\r")
+            String cmd = "<1" + (z+1) + "MU00\r";
+            comm.writeBytes(cmd.getBytes(StandardCharsets.UTF_8), 8);
         }
         System.out.println("Zone " + (z+1) + " mute toggled.");
     }
 
     @Override public void initialize(URL url, ResourceBundle resourceBundle) {
+        // initialize serial communication
+        comm.setComPortTimeouts((SerialPort.TIMEOUT_READ_BLOCKING|SerialPort.TIMEOUT_WRITE_BLOCKING),500, 500);
+        comm.openPort();
+
         // initialize arrays of buttons/sliders/checkboxes/labels
         zonePower[0] = z1power;
         zonePower[1] = z2power;
